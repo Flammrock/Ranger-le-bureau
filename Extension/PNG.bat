@@ -6,9 +6,8 @@ set currentpath3=%~dp0
 set currentpath2=%currentpath2:\extension=%
 :: Récupère le chemin du bureau
 set currentpath="%USERPROFILE%\Desktop\"
-
 :: Vérification
-for /f "tokens=* delims=" %%a in ('type %currentpath2%extension.ini^| Find /i "png"') do echo %%a > %currentpath2%001.txt
+for /f "tokens=* delims=" %%a in ('type %currentpath2%extension.ini^| Find /i "PNG"') do echo %%a > %currentpath2%001.txt
 setlocal EnableDelayedExpansion
 type nul > "%currentpath2%CaB.txt"
 for /F "delims=" %%A in ('type "%currentpath2%001.txt"') do (
@@ -54,17 +53,16 @@ echo PNG = %ok%
 del "%currentpath2%001.txt"
 if "%ok%"=="true" goto :true
 goto :false
-
 :true
 :: ####### CREATION DES REPERTOIRE - Triage
-if exist "%currentpath%*.png" MD "%currentpath%Images\PNG"
+if exist "%currentpath%*.PNG" MD "%currentpath%images-rangées/PNG"
 :: ####### DEPLACEMENTS FICHIERS
 :: Copie des fichiers selon une extention précise
-FOR %%f IN ("%currentpath%*.png" ) DO ( 
-move %%f "%currentpath%Images\PNG"
+FOR %%f IN ("%currentpath%*.PNG" ) DO ( 
+move %%f "%currentpath%images-rangées/PNG"
 :: variable pour annulation
 set /a NUM = %NUM% + 1
-set png%NUM% = %%f
+set PNG%NUM% = %%f
 :: info > rapport.txt
 echo [%date%] %time% - %%f >> "%currentpath2%rapport.txt"
 :: supprimer le path
@@ -78,5 +76,4 @@ for /F "delims=" %%A in ('type "%currentpath2%rapport.txt"') do (
 del "%currentpath2%rapport.txt"
 ren "%currentpath2%CaB.txt"  rapport.txt
 )
-
 :false

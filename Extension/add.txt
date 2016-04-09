@@ -7,8 +7,6 @@ set currentpath2=%currentpath2:\extension=%
 :: Récupère le chemin du bureau
 set currentpath="%USERPROFILE%\Desktop\"
 
-:: chemin triage
-set /p chemin=<%currentpath3%chemin.txt
 
 :: Vérification
 for /f "tokens=* delims=" %%a in ('type %currentpath2%extension.ini^| Find /i "%extension%"') do echo %%a > %currentpath2%001.txt
@@ -60,11 +58,11 @@ goto :false
 
 :true
 :: ####### CREATION DES REPERTOIRE - Triage
-if exist "%currentpath%*.%extension%" MD "%currentpath%%chemin%"
+if exist "%currentpath%*.%extension%" MD "%currentpath%%33chemin33%"
 :: ####### DEPLACEMENTS FICHIERS
 :: Copie des fichiers selon une extention précise
 FOR %%f IN ("%currentpath%*.%extension%" ) DO ( 
-move %%f "%currentpath%%chemin%"
+move %%f "%currentpath%%33chemin33%"
 :: variable pour annulation
 set /a NUM = %NUM% + 1
 set %extension%%NUM% = %%f

@@ -7,7 +7,7 @@ set currentpath2=%currentpath2:\extension=%
 :: Récupère le chemin du bureau
 set currentpath="%USERPROFILE%\Desktop\"
 :: Vérification
-for /f "tokens=* delims=" %%a in ('type %currentpath2%extension.ini^| Find /i "BMP"') do echo %%a > %currentpath2%001.txt
+for /f "tokens=* delims=" %%a in ('type %currentpath2%extension.ini^| Find /i "GIF"') do echo %%a > %currentpath2%001.txt
 setlocal EnableDelayedExpansion
 type nul > "%currentpath2%CaB.txt"
 for /F "delims=" %%A in ('type "%currentpath2%001.txt"') do (
@@ -43,26 +43,26 @@ setlocal EnableDelayedExpansion
 type nul > "%currentpath2%CaB.txt"
 for /F "delims=" %%A in ('type "%currentpath2%001.txt"') do (
   set row=%%A
-  set row=!row:BMPh=!
+  set row=!row:GIFh=!
   echo.!row!>> "%currentpath2%CaB.txt"
 )
 del "%currentpath2%001.txt"
 ren "%currentpath2%CaB.txt"  001.txt
 set /p ok=<%currentpath2%001.txt
-echo BMP = %ok%
+echo GIF = %ok%
 del "%currentpath2%001.txt"
 if "%ok%"=="true" goto :true
 goto :false
 :true
 :: ####### CREATION DES REPERTOIRE - Triage
-if exist "%currentpath%*.BMP" MD "%currentpath%images-rangées/BMP"
+if exist "%currentpath%*.GIF" MD "%currentpath%images-rangées/GIF"
 :: ####### DEPLACEMENTS FICHIERS
 :: Copie des fichiers selon une extention précise
-FOR %%f IN ("%currentpath%*.BMP" ) DO ( 
-move %%f "%currentpath%images-rangées/BMP"
+FOR %%f IN ("%currentpath%*.GIF" ) DO ( 
+move %%f "%currentpath%images-rangées/GIF"
 :: variable pour annulation
 set /a NUM = %NUM% + 1
-set BMP%NUM% = %%f
+set GIF%NUM% = %%f
 :: info > rapport.txt
 echo [%date%] %time% - %%f >> "%currentpath2%rapport.txt"
 :: supprimer le path

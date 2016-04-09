@@ -1,6 +1,6 @@
 Fichier = "C:\Users\lemmy\Desktop\Bureau\Extension\MP4.bat" 
-LigneCherche = "%extension%" 
-Path = "MP4" 
+LigneCherche = "%33chemin33%" 
+Path = "Video-rangés\MP4" 
 Dim fso 
 Dim oRegEx 
 Dim monFichier 

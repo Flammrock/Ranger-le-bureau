@@ -16,6 +16,26 @@ if '%extension%'=='%%a' goto :exist
 )
 title Ajout en cours... 9%%
 @ping localhost -n 1 >nul
+echo Fichier = "%currentpath%%extension%.bat" > %currentpath%11245742150.vbs
+echo LigneCherche = "%%33chemin33%%" >> %currentpath%11245742150.vbs
+echo Path = "%chemin%" >> %currentpath%11245742150.vbs
+echo Dim fso >> %currentpath%11245742150.vbs
+echo Dim oRegEx >> %currentpath%11245742150.vbs
+echo Dim monFichier >> %currentpath%11245742150.vbs
+echo Dim sStream >> %currentpath%11245742150.vbs
+echo Dim sNewStream >> %currentpath%11245742150.vbs
+echo Set fso = CreateObject("Scripting.FileSystemObject") >> %currentpath%11245742150.vbs
+echo Set oRegEx = New RegExp >> %currentpath%11245742150.vbs
+echo oRegEx.Global = True >> %currentpath%11245742150.vbs
+echo oRegEx.Pattern = LigneCherche >> %currentpath%11245742150.vbs
+echo Set monFichier = fso.OpenTextFile(Fichier,1) >> %currentpath%11245742150.vbs
+echo sStream = monFichier.ReadAll >> %currentpath%11245742150.vbs
+echo monFichier.Close >> %currentpath%11245742150.vbs
+echo sNewStream = oRegEx.Replace(sStream, Replace(Path,"\","/")) >> %currentpath%11245742150.vbs
+echo If InStr(sNewStream,vbLf)=1 Then sNewStream = Replace(sNewStream, Replace(Path,"\","/"),1,1) >> %currentpath%11245742150.vbs
+echo Set monFichier = fso.OpenTextFile(Fichier,2) >> %currentpath%11245742150.vbs
+echo monFichier.Write sNewStream >> %currentpath%11245742150.vbs
+echo monFichier.Close >> %currentpath%11245742150.vbs
 echo Fichier = "%currentpath%%extension%.bat" > %currentpath%11445220.vbs
 echo LigneCherche = "%%extension%%" >> %currentpath%11445220.vbs
 echo Path = "%extension%" >> %currentpath%11445220.vbs
@@ -63,6 +83,7 @@ echo %%a>> "%currentpath%%extension%.bat"
 title Ajout en cours... 95%%
 @ping localhost -n 1 >nul
 start %currentpath%11445220.vbs
+start %currentpath%11245742150.vbs
 for /F "delims=" %%a in ('type "%currentpath%addliste.txt"') do (
 echo %%a>> "%currentpath%liste.txt"
 )

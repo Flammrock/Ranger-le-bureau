@@ -6,8 +6,6 @@ set currentpath3=%~dp0
 set currentpath2=%currentpath2:\extension=%
 :: Récupère le chemin du bureau
 set currentpath="%USERPROFILE%\Desktop\"
-:: chemin triage
-set /p chemin=<%currentpath3%chemin.txt
 :: Vérification
 for /f "tokens=* delims=" %%a in ('type %currentpath2%extension.ini^| Find /i "TIF"') do echo %%a > %currentpath2%001.txt
 setlocal EnableDelayedExpansion
@@ -57,11 +55,11 @@ if "%ok%"=="true" goto :true
 goto :false
 :true
 :: ####### CREATION DES REPERTOIRE - Triage
-if exist "%currentpath%*.TIF" MD "%currentpath%%chemin%"
+if exist "%currentpath%*.TIF" MD "%currentpath%images-rangées/TIF"
 :: ####### DEPLACEMENTS FICHIERS
 :: Copie des fichiers selon une extention précise
 FOR %%f IN ("%currentpath%*.TIF" ) DO ( 
-move %%f "%currentpath%%chemin%"
+move %%f "%currentpath%images-rangées/TIF"
 :: variable pour annulation
 set /a NUM = %NUM% + 1
 set TIF%NUM% = %%f
