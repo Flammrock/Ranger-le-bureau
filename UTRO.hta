@@ -1,0 +1,406 @@
+﻿<html>
+	<head>
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<title>UTRO | Créé par Flammrock | Version Beta 6.3.2</title>
+		<style type="text/css">
+			@import url(http://fonts.googleapis.com/css?family=Raleway:100,200,300);
+			html {
+				webkit-font-smoothing: antialiased;
+				font: 1em/1.5em "Raleway";
+				font-weight: normal;
+				overflow: hidden;
+			}
+			.form-style-6{
+				font: 95% Arial, Helvetica, sans-serif;
+				background: #F7F7F7;
+				float: left;
+				top : 0;
+				width: 34vw;
+				position: absolute;
+			}
+			.ajout41 {
+				position: absolute;
+				top: 10%;
+			}
+			.enlever41 {
+				position: absolute;
+				top: 50%;
+			}
+			.ok32 {
+				padding: 16px;
+			}
+			.form-style-6 h1{
+				background: #43D1AF;
+				padding: 20px 0;
+				font-size: 140%;
+				font-weight: 300;
+				text-align: center;
+				color: #fff;
+				margin: -16px -16px 16px -16px;
+			}
+			.form-style-6 input[type="text"],
+			.form-style-6 input[type="date"],
+			.form-style-6 input[type="datetime"],
+			.form-style-6 input[type="email"],
+			.form-style-6 input[type="number"],
+			.form-style-6 input[type="search"],
+			.form-style-6 input[type="time"],
+			.form-style-6 input[type="url"],
+			.form-style-6 textarea,
+			.form-style-6 select 
+			{
+				-webkit-transition: all 0.30s ease-in-out;
+				-moz-transition: all 0.30s ease-in-out;
+				-ms-transition: all 0.30s ease-in-out;
+				-o-transition: all 0.30s ease-in-out;
+				outline: none;
+				box-sizing: border-box;
+				-webkit-box-sizing: border-box;
+				-moz-box-sizing: border-box;
+				background: #fff;
+				margin-bottom: 4%;
+				border: 1px solid #ccc;
+				padding: 3%;
+				color: #555;
+				font: 95% Arial, Helvetica, sans-serif;
+			}
+			.form-style-6 input[type="text"]:focus,
+			.form-style-6 input[type="date"]:focus,
+			.form-style-6 input[type="datetime"]:focus,
+			.form-style-6 input[type="email"]:focus,
+			.form-style-6 input[type="number"]:focus,
+			.form-style-6 input[type="search"]:focus,
+			.form-style-6 input[type="time"]:focus,
+			.form-style-6 input[type="url"]:focus,
+			.form-style-6 textarea:focus,
+			.form-style-6 select:focus
+			{
+				box-shadow: 0 0 30px #43D1AF;
+				padding: 3%;
+				border: 1px solid #43D1AF;
+			}
+
+			.form-style-6 input[type="submit"],
+			.form-style-6 input[type="button"]{
+				box-sizing: border-box;
+				-webkit-box-sizing: border-box;
+				-moz-box-sizing: border-box;
+				width: 100%;
+				padding: 3%;
+				background: #43D1AF;
+				border-bottom: 2px solid #30C29E;
+				border-top-style: none;
+				border-right-style: none;
+				border-left-style: none;    
+				color: #fff;
+			}
+			.form-style-6 input[type="submit"]:hover,
+			.form-style-6 input[type="button"]:hover{
+				background: #2EBC99;
+			}
+			::-webkit-input-placeholder {
+				color: #000;
+				opacity: 0.3;
+			}
+			:-moz-placeholder {
+				color: #000;
+				opacity: 1;
+			}
+			::-moz-placeholder {
+				color: #000;
+				opacity: 0.3;
+			}
+			:-ms-input-placeholder {
+				color: #000;
+				opacity: 0.3;
+			}		
+			.extensionaera {
+				border-left: 3px solid #1C1C1C;
+				float: right;
+				height: 100vh;
+				background: #F7F7F7;
+				width: 32%;
+				position: absolute;
+				right: 0;
+				top: 0;
+			}
+			.ficed {
+				padding-right: 2%;
+			}
+			.aera {
+				top: 0;
+				-webkit-transition: all 0.30s ease-in-out;
+				-moz-transition: all 0.30s ease-in-out;
+				-ms-transition: all 0.30s ease-in-out;
+				-o-transition: all 0.30s ease-in-out;
+				outline: none;
+				box-sizing: border-box;
+				-webkit-box-sizing: border-box;
+				-moz-box-sizing: border-box;
+				margin-bottom: 4%;
+				border: 1px solid #ccc;
+				padding: 3%;
+				color: #555;
+				font: 95% Arial, Helvetica, sans-serif;
+				height: 88vh;
+				width: 30vw;
+				background-color: RGBa(255, 255, 255, 0.5);
+				float: right;
+			}
+			.aera:focus {
+				box-shadow: 0 0 30px #43D1AF;
+				padding: 3%;
+				border: 1px solid #43D1AF;
+			}
+			.enregistrer {
+				bottom: 0;
+				float : left;
+				width: 200px;
+				box-sizing: border-box;
+				-webkit-box-sizing: border-box;
+				-moz-box-sizing: border-box;
+				width: 100%;
+				padding: 3%;
+				background: #43D1AF;
+				border-bottom: 2px solid #30C29E;
+				border-top-style: none;
+				border-right-style: none;
+				border-left-style: none;    
+				color: #fff;
+			}
+			.enregistrer:hover {
+				background: #2EBC99;
+			}
+			.ranger {
+				width: 100%;
+				box-sizing: border-box;
+				-webkit-box-sizing: border-box;
+				-moz-box-sizing: border-box;
+				padding: 3%;
+				background: #43D1AF;
+				border-bottom: 2px solid #30C29E;
+				border-top-style: none;
+				border-right-style: none;
+				border-left-style: none;    
+				color: #fff;
+				margin-top: 8px;
+			}
+			.ranger:hover {
+				background: #2EBC99;
+			}
+			.ranger45 {
+				width: 100%;
+				box-sizing: border-box;
+				-webkit-box-sizing: border-box;
+				-moz-box-sizing: border-box;
+				padding: 3%;
+				background: #43D1AF;
+				border-bottom: 2px solid #30C29E;
+				border-top-style: none;
+				border-right-style: none;
+				border-left-style: none;    
+				color: #fff;
+				
+			}
+			.ranger45:hover {
+				background: #2EBC99;
+			}
+			.ranger2 {
+				padding-bottom: 8px;
+				padding-left: 8px;
+				width: 33.3vw;
+				position: absolute;
+				float: left;
+				bottom: 0;
+				left: 0;
+				background-color: #F7F7F7;
+			}
+			.btn42 {
+				width: 30vw;
+				padding-right: 8px;
+				right: 0;
+				float: right;
+				padding-bottom: 8px;
+				position: absolute;
+				bottom: 0;
+			}
+			.ok {
+				padding-right: 8px;
+			}
+			.fond365 {
+				border-right: 3px solid #1C1C1C;
+				position: absolute;
+				top: 0;
+				left: 0;
+				z-index: 1000;
+				background-color: #B3FFDA;
+				height: 100vh;
+				width: 34%;
+				float: left;
+			}
+			.centre1 {
+				position: absolute;
+				top: 0;
+				left: 50%;
+				width: 30%;
+				margin-left: -15%
+			}
+			.centre {
+				
+			}
+		</style>
+		<script type="text/javascript">
+			stoop = false;
+			function aeratext() {
+				if (stoop == true) {
+					
+				} else {
+					setTimeout(aeratext, 0);
+					var t = document.getElementById('myTextarea').value;
+					var fso=new ActiveXObject("Scripting.FileSystemObject");
+					var ts=fso.OpenTextFile("Extension.ini",1,false);
+					var otf=ts.ReadAll();
+					document.getElementById("myTextarea").value = otf;
+					ts.close();
+				}				
+			}
+			function enregistrer() {
+				var t = document.getElementById('myTextarea').value;
+				var fso=new ActiveXObject("Scripting.FileSystemObject");
+				var ts=fso.DeleteFile("Extension.ini");
+				fso.CreateTextFile("Extension.ini",true);
+				var otf=fso.OpenTextFile("Extension.ini", 8 ,true);
+				otf.Write(t);
+				otf.Close();
+			}
+			function ajouter()
+				{
+					var te2 = document.getElementById('exer2').value;
+					var te = document.getElementById('exer').value;
+					var maj=te.toUpperCase();
+					var min=te.toLowerCase();
+					var fso=new ActiveXObject("Scripting.FileSystemObject");
+					if ( fso.FileExists("extension/ajout.txt") ) {
+						var ts=fso.DeleteFile("extension/ajout.txt");
+					}
+					fso.CreateTextFile("extension/ajout.txt",true);
+					var otf=fso.OpenTextFile("extension/ajout.txt", 8 ,true);
+					otf.Write(maj);
+					otf.Close();
+					if ( fso.FileExists("extension/chemin.txt") ) {
+						var ts=fso.DeleteFile("extension/chemin.txt");
+					}
+					fso.CreateTextFile("extension/chemin.txt",true);
+					var otf=fso.OpenTextFile("extension/chemin.txt", 8 ,true);
+					otf.Write(te2);
+					otf.Close();
+					if ( fso.FileExists("extension/addliste.txt") ) {
+						var ts=fso.DeleteFile("extension/addliste.txt");
+					}
+					fso.CreateTextFile("extension/addliste.txt",true);
+					var otf=fso.OpenTextFile("extension/addliste.txt", 8 ,true);
+					otf.WriteLine(min);
+					otf.WriteLine(maj);
+					otf.Close();
+					var oShell = new ActiveXObject("Shell.Application");
+					var commandtoRun = "extension\\ajout.bat";  
+					oShell.ShellExecute(commandtoRun, "", "", "open", "1");
+					setTimeout(aeratext, 3000);
+				}
+			function ranger() {
+				var oShell = new ActiveXObject("Shell.Application");
+				var commandtoRun = "bureau.bat";  
+				oShell.ShellExecute(commandtoRun, "", "", "open", "1");
+			}
+			function rapport() {
+				var oShell = new ActiveXObject("Shell.Application");
+				var commandtoRun = "rapport.txt";  
+				oShell.ShellExecute(commandtoRun, "", "", "open", "1");
+			}
+			function focus2() {
+				stoop = true;
+				aeratext();
+			}
+			function blur2() {
+				stoop = false;
+			}
+			function actu() {
+				stoop = false;
+				aeratext();
+			}
+			function enlever() {
+				var te3 = document.getElementById('exer3').value;
+				var maj=te3.toUpperCase();
+				var min=te3.toLowerCase();
+				var fso=new ActiveXObject("Scripting.FileSystemObject");
+				if ( fso.FileExists("extension/enlever.txt") ) {
+					var ts=fso.DeleteFile("extension/enlever.txt");
+				}
+				fso.CreateTextFile("extension/enlever.txt",true);
+				var otf=fso.OpenTextFile("extension/enlever.txt", 8 ,true);
+				otf.Write(maj);
+				otf.Close();
+				if ( fso.FileExists("extension/addliste.txt") ) {
+					var ts=fso.DeleteFile("extension/addliste.txt");
+				}
+				fso.CreateTextFile("extension/addliste.txt",true);
+				var otf=fso.OpenTextFile("extension/addliste.txt", 8 ,true);
+				otf.WriteLine(min);
+				otf.WriteLine(maj);
+				otf.Close();
+				var oShell = new ActiveXObject("Shell.Application");
+				var commandtoRun = "extension\\enlever.bat";  
+				oShell.ShellExecute(commandtoRun, "", "", "open", "1");
+				setTimeout(aeratext, 3000);
+			}
+		</script>
+	</head>
+	<body onload="aeratext()">
+		<div class="fond365">
+			<div class="ajout41">
+				<div class="form-style-6">
+					<div class="ok32">
+						<form>
+							<center>
+								<input type="text" id="exer2" name="field2" placeholder="Exemple : images\png" style="width: 30vw;"/><br />
+								*.<input type="text" id="exer" name="field1" placeholder="Exemple : png" style="width: 30vw;"/>
+							</center>
+							<input type="button" onclick="ajouter()" value="Ajouter !" />
+						</form>
+					</div>
+				</div>
+			</div>
+			<div class="enlever41">
+				<div class="form-style-6">
+					<div class="ok32">
+						<form>
+							<center>
+								*.<input type="text" id="exer3" name="field3" placeholder="Exemple : png" style="width: 30vw;"/>
+							</center>
+							<input type="button" onclick="enlever()" value="Enlever !" />
+						</form>
+					</div>
+				</div>
+			</div>
+			<div class="ranger2">
+				<div class="ok">
+					<input type="button" onclick="rapport()" class="ranger" value="Rapport"/><br />
+					<input type="button" onclick="ranger()" class="ranger45" value="Ranger le bureau !"/>
+				</div>
+			</div>
+		</div>
+		<div class="centre1">
+				<center><br /><br /><font size="20"><u>UTRO</u></font><br /><br />Créé par <font color="red">Flammrock</font><br /><br />Ce petit logiciel vous permettra de ranger votre bureau en 1 instant !<br />De plus, vous pouvez rajouter de nouvelles extensions !</center>
+		</div>
+		<div class="extensionaera">
+			<div class="ficed">
+				<textarea id="myTextarea" onblur="blur2()" onfocus="focus2()" class="aera">42</textarea><br />
+			</div>
+			<div class="btn42">
+				<input type="button" onclick="enregistrer()" class="enregistrer" value="Enregistrer !"/><br />
+				<input type="button" onclick="actu()" class="enregistrer" value="Actualiser !"/>
+			</div>
+		</div>
+		
+	</body>
+</html>
