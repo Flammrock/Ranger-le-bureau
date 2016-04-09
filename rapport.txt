@@ -1,13 +1,2 @@
 //RAPPORT 
-[09/04/2016] 13:49:39,09 - C:\Users\lemmy\Desktop\1909ffa0.png 
-[09/04/2016] 13:49:39,09 - C:\Users\lemmy\Desktop\Capxdlolture.PNG 
-[09/04/2016] 13:49:39,09 - C:\Users\lemmy\Desktop\Personnages-celebres-Troll-face-Forever-alone-306146.png 
-[09/04/2016] 13:49:39,09 - C:\Users\lemmy\Desktop\Transparent_Troll_Face.png 
-[09/04/2016] 13:49:40,35 - C:\Users\lemmy\Desktop\4267751-Green-grass-texture-que-les-carreaux-de-fa-on-transparente-comme-un-mod-le--Banque-d'images.jpg 
-[09/04/2016] 13:49:40,35 - C:\Users\lemmy\Desktop\5f893ac6adfa90f0181ed3e9e1e2ab60.jpg 
-[09/04/2016] 13:49:40,35 - C:\Users\lemmy\Desktop\8524306-Mur-de-Pierre-antique-texture-Murs-des-temps-de-chevaliers-Malte-Banque-d'images.jpg 
-[09/04/2016] 13:49:40,35 - C:\Users\lemmy\Desktop\9-Sky-Texture.jpg 
-[09/04/2016] 13:49:40,35 - C:\Users\lemmy\Desktop\jw5-tdwjbaxp7m-.jpg 
-[09/04/2016] 13:49:40,35 - C:\Users\lemmy\Desktop\Sky_horiz_20.jpg 
-[09/04/2016] 13:49:40,35 - C:\Users\lemmy\Desktop\sky_photo6.jpg 
-[09/04/2016] 13:49:40,35 - C:\Users\lemmy\Desktop\wallpaper-weather-rainbow-sky-clouds-sunny-wallpapers.jpg 
+
