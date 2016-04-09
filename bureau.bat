@@ -23,3 +23,13 @@ call %currentpath1%Extension\MP3.bat
 call %currentpath1%Extension\WAV.bat
 call %currentpath1%Extension\OGG.bat
 call %currentpath1%Extension\OGG.bat
+call %currentpath1%Extension\PNG.bat
+call %currentpath1%Extension\JPG.bat
+call %currentpath1%Extension\BMP.bat
+call %currentpath1%Extension\GIF.bat
+call %currentpath1%Extension\TIF.bat
+call %currentpath1%Extension\MP3.bat
+call %currentpath1%Extension\WAV.bat
+call %currentpath1%Extension\AVI.bat
+call %currentpath1%Extension\MKV.bat
+call %currentpath1%Extension\MP4.bat
